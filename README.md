@@ -4,42 +4,42 @@ Description:
 MultiServerSQLExplorer is a robust desktop application built with Python's Tkinter framework that provides secure, multi-server SQL query management capabilities. The application facilitates controlled database access and query execution across multiple SQL Server instances with built-in failover support.
 Key Features:
 
-Secure Authentication
+**Secure Authentication**
 
 - Multi-user support with login system
 - Concurrent user session management (maximum 2 active users)
 - Secure password hashing for user credentials
 
 
-SQL Server Connectivity
+**SQL Server Connectivity**
 
 - Dynamic server selection from uploaded Excel configurations
 - Dual-series IP support (Series 16 and 28) with automatic failover
 - Secure SQL Server credential management
 
 
-Query Management
+**Query Management**
 
 - Interactive query input interface
 - Batch query execution across multiple servers
 - Comprehensive query logging system with timestamp tracking
 
 
-Data Handling
+**Data Handling**
 
 - Results visualization in tabular format
 - Excel export functionality for query results
 - Automated download management to user's download directory
 
 
-Security Features
+**Security Features**
 
 - Session management and controlled logout
 - Credentials validation at multiple levels
 - Secure storage of user data in JSON format
 
 
-User Experience
+**User Experience**
 
 - Intuitive tabbed interface
 - Clear status notifications via message boxes

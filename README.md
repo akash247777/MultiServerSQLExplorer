@@ -54,4 +54,12 @@ This application is particularly useful for database administrators and analysts
 - Track query execution history
 - Export and analyze query results efficiently
 
-The application combines security, functionality, and user-friendly design to provide a comprehensive solution for managing SQL queries across distributed database environments.
+**Technical Implementation**
+
+- Built using Python with Tkinter framework
+- Packaged as standalone executable file
+- Features distributed database environment support
+- Implements comprehensive security measures
+
+**Summary**
+The application combines security, functionality, and user-friendly design to provide a comprehensive solution for managing SQL queries across distributed database environments within Apollo 24|7's infrastructure. 

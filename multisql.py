@@ -1,38 +1,58 @@
-import tkinter as tk
+# Import the tkinter module, which is used for creating the GUI application.
+import tkinter as tk 
+# Import specific components from tkinter to create enhanced GUI elements like ComboBoxes (ttk), 
+# a file dialog to select files, and message boxes for alert messages.
 from tkinter import ttk, filedialog, messagebox
+# Import the hashlib library to use hashing algorithms, typically used here to hash passwords or sensitive data.
 import hashlib
+# Import pyodbc, a library that provides connectivity to SQL databases via ODBC drivers.
 import pyodbc
+# Import pandas, a powerful data manipulation library, which can handle data structures like DataFrames.
 import pandas as pd
+# Import BytesIO, which enables us to handle binary I/O, commonly used here for handling file-like byte streams.
 from io import BytesIO
+# Import the re module to use regular expressions, useful for pattern matching and data validation.
 import re
+# Import datetime to handle date and time information, likely used for timestamping logs.
 from datetime import datetime
+# Import os module to interact with the operating system, typically used for file handling and path management.
 import os
+# Import json library to work with JSON data, which is a common format for configuration and data exchange.
 import json
 
-# File path to store logs
-LOG_FILE_PATH = "C:\\Users\\APL41051\\query_logs.xlsx"
+# Define the file path where the application will store logs of user activity and queries.
+LOG_FILE_PATH = "C:\\query_logs.xlsx"
 
-# Maximum number of users that can be logged in simultaneously
+# Define a constant for the maximum number of users that can be logged in to the application simultaneously.
 MAX_ACTIVE_USERS = 2
 
+# Specify the path for the JSON file storing user data (like usernames and passwords).
 USER_DATA_FILE = 'C:\\Users\\APL41051\\user_data.json'
 
 
+# Define the main class for the application that will handle the GUI and backend logic.
 class SQLQueryApp:
+    # Constructor method that initializes the application and sets up the main GUI elements.
     def __init__(self, master):
+        # Save the reference to the main application window (master).
         self.master = master
+        # Set the title of the main window to "SQL Query Application".
         self.master.title("SQL Query Application")
+        # Define the dimensions of the main window to 800x600 pixels.
         self.master.geometry("800x600")
 
-       
-        self.logged_in = False
-        self.username = None
-        self.active_users = []
-        self.sql_server_credentials = None
-        self.default_database = "POSDBIR"
+        # Initialize variables for tracking login status, current username, active users, and SQL credentials.
+        self.logged_in = False  # Flag indicating if a user is currently logged in.
+        self.username = None  # Placeholder for the username of the currently logged-in user.
+        self.active_users = []  # List to store the usernames of currently active users.
+        self.sql_server_credentials = None  # Placeholder for SQL server login credentials.
+        self.default_database = "POSDBIR"  # Define the default database to use in SQL queries.
 
+        # Call the function to create GUI components for the application.
         self.create_widgets()
+        # Display the login frame first for user authentication.
         self.show_login_frame()
+
 
     def create_widgets(self):
         self.notebook = ttk.Notebook(self.master)

@@ -54,17 +54,31 @@ class SQLQueryApp:
         self.show_login_frame()
 
 
-    def create_widgets(self):
-        self.notebook = ttk.Notebook(self.master)
-        self.notebook.pack(fill=tk.BOTH, expand=True)
+    # Defines a method named 'create_widgets' which is part of a class (indicated by 'elf')
+   def create_widgets(self):
+       # Initializes a ttk Notebook widget (for tabbed interface) as an attribute of the class instance
+       self.notebook = ttk.Notebook(self.master)
+    
+       # Packs the notebook into its parent widget (self.master), allowing it to expand in both directions
+       self.notebook.pack(fill=tk.BOTH, expand=True)
 
-        self.login_frame = ttk.Frame(self.notebook)
-        self.credentials_frame = ttk.Frame(self.notebook)
-        self.app_frame = ttk.Frame(self.notebook)
+       # Creates a new frame for the login interface as a tab within the notebook
+       self.login_frame = ttk.Frame(self.notebook)
+    
+       # Creates a new frame for the credentials interface as a separate tab within the notebook
+       self.credentials_frame = ttk.Frame(self.notebook)
+    
+       # Creates a new frame for the main application interface as another tab within the notebook
+       self.app_frame = ttk.Frame(self.notebook)
 
-        self.create_login_widgets()
-        self.create_credentials_widgets()
-        self.create_app_widgets()
+       # Calls a method to create and configure widgets specifically for the login frame
+       self.create_login_widgets()
+    
+       # Calls a method to create and configure widgets specifically for the credentials frame
+       self.create_credentials_widgets()
+    
+       # Calls a method to create and configure widgets specifically for the main application frame
+       self.create_app_widgets()
 
     def show_login_frame(self):
     # Add only the login frame if it is not already in the notebook

@@ -2,7 +2,8 @@
 ## Here's a comprehensive description for the SQLQueryManager project:
 Description:
 MultiServerSQLExplorer is a robust desktop application built with Python's Tkinter framework that provides secure, multi-server SQL query management capabilities. The application facilitates controlled database access and query execution across multiple SQL Server instances with built-in failover support.
-Key Features:
+
+# Key Features:
 
 **Secure Authentication**
 
